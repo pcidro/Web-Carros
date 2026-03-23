@@ -5,7 +5,8 @@ import Dashboard from "./Pages/Dashboard/Dashboard";
 import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register";
 import New from "./Pages/Dashboard/New/New";
-import Layout from "./Components/Layout";
+import Layout from "./Components/Layout/Layout";
+import Private from "./Routes/Private";
 
 const router = createBrowserRouter([
   {
@@ -21,11 +22,19 @@ const router = createBrowserRouter([
       },
       {
         path: "/dashboard",
-        element: <Dashboard />,
+        element: (
+          <Private>
+            <Dashboard />
+          </Private>
+        ),
       },
       {
         path: "/dashboard/new",
-        element: <New />,
+        element: (
+          <Private>
+            <Dashboard />
+          </Private>
+        ),
       },
     ],
   },
