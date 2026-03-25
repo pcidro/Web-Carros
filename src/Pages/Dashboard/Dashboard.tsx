@@ -1,7 +1,13 @@
 import React from "react";
+import Container from "../../Components/Container";
+import PainelHeader from "../../Components/PainelHeader/PainelHeader";
 
 const Dashboard = () => {
-  return <div> Dashboard</div>;
+  return (
+    <Container>
+      <PainelHeader />
+    </Container>
+  );
 };
 
 export default Dashboard;
